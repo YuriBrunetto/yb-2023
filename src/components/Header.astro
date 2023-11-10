@@ -1,7 +1,13 @@
-<header class="container m-auto max-w-lg">
-  <nav class="flex items-center justify-center py-4">
-    <a href="/">home</a>
-    <a href="/about">about</a>
-    <a href="/work">work</a>
+---
+import MenuButton from './MenuButton.astro'
+---
+
+<header
+  class="drop-shadow-lg w-full top-0 z-10 left-0 flex justify-center items-center backdrop-blur-sm fixed py-2 border-b border-solid border-b-white/[0.05]"
+>
+  <nav class="flex items-center justify-center">
+    <MenuButton title="Home" href="/" />
+    <MenuButton title="About" href="/about" />
+    <MenuButton title="Work" href="/work" />
   </nav>
 </header>

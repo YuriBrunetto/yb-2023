@@ -1,0 +1,12 @@
+---
+interface Props {
+  href: string
+  title: string
+}
+
+const { title, href } = Astro.props
+---
+
+<a href={href} title={title} class="block p-3 cursor-pointer"
+  >{title.toLowerCase()}</a
+>
