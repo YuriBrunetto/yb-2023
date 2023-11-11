@@ -1,15 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro'
+
+import { Image } from 'astro:assets'
+import ybImage from '../images/yb2023.jpg'
 ---
 
 <Layout title="Yuri Brunetto's personal website">
-  <h1 class="italic text-4xl lowercase">I'm <strong>Yuri Brunetto</strong>,</h1>
+  <h1 class="italic text-3xl">I'm <strong>Yuri Brunetto</strong>,</h1>
 
   <section class="mt-4 lowercase">
-    <img
-      src="/yb2023.jpg"
+    <Image
+      src={ybImage}
       alt="Yuri Brunetto"
       class="border border-white/70 max-w-[200px]"
+      width={400}
+      height={400}
     />
 
     <span class="text-xs text-white/40">that's me 🍁</span>
@@ -19,12 +24,11 @@ import Layout from '../layouts/Layout.astro'
       crafting web wonders. Technology has been my playground, and I've had the
       privilege of building everything from elegant websites to complex web
       applications.
-
       <em
         >Currently working as <a
           href="https://voro.tech/"
           title="Vorotech"
-          class="text-amber-500 hover:underline"
+          class="text-blue-600 hover:underline"
           target="_blank"><strong>Full Stack Developer</strong> @ Vorotech</a
         >.</em
       >
@@ -36,8 +40,8 @@ import Layout from '../layouts/Layout.astro'
       creativity that fuels my work as a developer. you can <a
         href="https://open.spotify.com/artist/3cbKEtasrEgYDk5k5pKwpH?si=Le9ZJiNXSgydue0sYo9NrQ"
         title="Listen to my songs on Spotify"
-        class="text-amber-500 hover:underline"
-        target="_blank">listen to my songs on spotify</a
+        class="text-green-500 hover:underline"
+        target="_blank"><strong>listen to my songs</strong> on spotify</a
       >!
     </p>
     <p>
@@ -48,11 +52,12 @@ import Layout from '../layouts/Layout.astro'
     </p>
     <p>
       📩 if you're interested in getting in touch, feel free to reach out in my
-      e-mail <code class="text-amber-700 cursor-pointer" data-copy-button
-        >brunettoyuri@gmail.com</code
+      e-mail <code
+        class="text-pink-600 font-bold cursor-pointer"
+        data-copy-button>brunettoyuri@gmail.com</code
       >
        or via my socials, you can find me anywhere using <code
-        class="text-amber-700 cursor-pointer"
+        class="text-pink-600 cursor-pointer font-bold"
         data-copy-button>@brun3tto</code
       >
        😙
@@ -79,6 +84,8 @@ import Layout from '../layouts/Layout.astro'
           background: '#111',
           maxWidth: '280px',
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
+          fontSize: '12px',
+          color: 'rgba(255,255,255,.7)',
         },
       }).showToast()
     })
