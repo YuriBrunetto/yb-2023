@@ -6,13 +6,15 @@ import ybImage from '../images/yb2023.jpg'
 ---
 
 <Layout title="Yuri Brunetto's personal website">
-  <h1 class="italic text-3xl">I'm <strong>Yuri Brunetto</strong>,</h1>
+  <h1 class="inline-block text-2xl italic">
+    I'm <strong>Yuri Brunetto</strong>,
+  </h1>
 
   <section class="mt-4 lowercase">
     <Image
       src={ybImage}
       alt="Yuri Brunetto"
-      class="border border-white/70 max-w-[200px]"
+      class="max-w-[200px] border border-white/70"
       width={400}
       height={400}
     />
@@ -20,10 +22,10 @@ import ybImage from '../images/yb2023.jpg'
     <span class="text-xs text-white/40">that's me 🍁</span>
 
     <p>
-      👨🏽‍💻 a passionate full-stack developer with over a decade of experience
-      crafting web wonders. Technology has been my playground, and I've had the
-      privilege of building everything from elegant websites to complex web
-      applications.
+      👨🏽‍💻 a passionate <em>full-stack developer</em> with over a decade of
+      experience crafting web wonders. Technology has been my playground, and
+      I've had the privilege of building everything from elegant websites to
+      complex web and mobile applications.
       <em
         >Currently working as <a
           href="https://voro.tech/"
@@ -37,27 +39,32 @@ import ybImage from '../images/yb2023.jpg'
       🎵 music has been a driving force in my life since day one. When I'm not
       coding, you'll often find me lost producing melodies, rhythm, and harmony.
       Music is more than a hobby; it's a profound source of inspiration and
-      creativity that fuels my work as a developer. you can <a
+      creativity that fuels my life. you can <a
         href="https://open.spotify.com/artist/3cbKEtasrEgYDk5k5pKwpH?si=Le9ZJiNXSgydue0sYo9NrQ"
         title="Listen to my songs on Spotify"
         class="text-green-500 hover:underline"
-        target="_blank"><strong>listen to my songs</strong> on spotify</a
+        target="_blank"
+        ><strong>listen to my autoral songs</strong> on spotify</a
       >!
     </p>
     <p>
       🕹️ gaming is another realm I adore. As a hobbyist game developer, I get to
       combine my technical skills with my love for gaming. I believe that game
       development is not just about creating experiences but also exploring the
-      art of storytelling through interactive mediums.
+      art of storytelling through a good gameplay and entertainment.
     </p>
     <p>
-      📩 if you're interested in getting in touch, feel free to reach out in my
+      📩 if you're interested in getting in touch, feel free to reach out @ my
       e-mail <code
-        class="text-pink-600 font-bold cursor-pointer"
+        class="cursor-pointer font-bold text-pink-600"
         data-copy-button>brunettoyuri@gmail.com</code
-      >
-       or via my socials, you can find me anywhere using <code
-        class="text-pink-600 cursor-pointer font-bold"
+      >, <a
+        href="https://www.linkedin.com/in/brun3tto/"
+        title="Yuri Brunetto on LinkedIn"
+        class="font-bold text-blue-500 hover:underline"
+        target="_blank">linkedin profile</a
+      > or via my socials, you can find me anywhere using <code
+        class="cursor-pointer font-bold text-pink-600"
         data-copy-button>@brun3tto</code
       >
        😙
@@ -78,7 +85,7 @@ import ybImage from '../images/yb2023.jpg'
         text: 'copied to clipboard!',
         duration: 4000,
         gravity: 'top',
-        position: 'left',
+        position: 'right',
         stopOnFocus: true,
         style: {
           background: '#111',

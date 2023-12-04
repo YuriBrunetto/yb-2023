@@ -1,5 +1,5 @@
 ---
-// import Header from '../components/Header.astro'
+import { SEO } from 'astro-seo'
 import Footer from '../components/Footer.astro'
 
 interface Props {
@@ -12,62 +12,64 @@ const { title } = Astro.props
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <SEO
+      title={title}
+      description="Yuri Brunetto is a software engineer, producer and musician."
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.svg' }],
+      }}
+    />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="UTF-8" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" type="text/css" href="/toastify.min.css" />
-
-    <title>{title}</title>
   </head>
 
   <body>
-    <!--<Header />-->
+    <!-- <Header /> -->
 
-    <main class="container m-auto px-6 pt-12 pb-12 max-w-lg mb-auto">
+    <main class="container m-auto mb-auto max-w-lg px-6 py-8">
       <slot />
     </main>
 
     <Footer />
+    <style is:global>
+      ::selection {
+        background-color: #333;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      body {
+        background-color: #171717;
+        color: rgba(255, 255, 255, 0.7);
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          Liberation Mono,
+          Courier New,
+          monospace;
+      }
+
+      main p {
+        line-height: 180%;
+        font-size: 14px;
+        margin: 1.5em 0;
+      }
+
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  ::selection {
-    background-color: #333;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  body {
-    background-color: #171717;
-    color: rgba(255, 255, 255, 0.7);
-    font-family:
-      ui-monospace,
-      SFMono-Regular,
-      Menlo,
-      Monaco,
-      Consolas,
-      Liberation Mono,
-      Courier New,
-      monospace;
-  }
-
-  main p {
-    line-height: 180%;
-    font-size: 14px;
-    margin: 1.5em 0;
-  }
-
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
