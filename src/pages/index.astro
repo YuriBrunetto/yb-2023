@@ -22,18 +22,15 @@ import ybImage from '../images/yb2023.jpg'
     <span class="text-xs text-white/40">that's me 🍁</span>
 
     <p>
-      👨🏽‍💻 a passionate <em>software engineer</em> with over a decade of
+      👨🏽‍💻 a passionate <em>full stack developer</em> with over a decade of
       experience crafting web wonders. Technology has been my playground, and
       I've had the privilege of building everything from elegant websites to
-      complex web and mobile applications.
-      <em
-        >Currently working as <a
-          href="https://voro.tech/"
-          title="Vorotech"
-          class="text-blue-600 hover:underline"
-          target="_blank"><strong>Full Stack Developer</strong> @ Vorotech</a
-        >.</em
-      >
+      complex web and mobile applications. you can check out my <a
+        href="https://yuribrunetto.notion.site/Yuri-Brunetto-22460b21cb7d4eda9fcb3e630978576a?pvs=4"
+        title="My curriculum"
+        class="font-bold text-blue-400"
+        target="_blank">entire curriculum</a
+      > here.
     </p>
     <p>
       🎵 music has been a driving force in my life since day one. When I'm not
@@ -66,8 +63,7 @@ import ybImage from '../images/yb2023.jpg'
       > or via my socials, you can find me anywhere using <code
         class="cursor-pointer font-bold text-pink-600"
         data-copy-button>@brun3tto</code
-      >
-       😙
+      >.
     </p>
   </section>
 </Layout>
@@ -81,6 +77,7 @@ import ybImage from '../images/yb2023.jpg'
   copyButtons.forEach((button) => {
     button.addEventListener('click', () => {
       copy(button.textContent)
+
       Toastify({
         text: 'copied to clipboard!',
         duration: 4000,
