@@ -15,6 +15,19 @@ const { title } = Astro.props
     <SEO
       title={title}
       description="Yuri Brunetto is a software engineer, producer and musician."
+      openGraph={{
+        basic: {
+          title: "Yuri Brunetto's personal website",
+          type: 'website',
+          image:
+            'https://www.yuribrunetto.com.br/_astro/yb2023.5f06f47a_Z1ARPIq.webp',
+          url: 'https://www.yuribrunetto.com.br',
+        },
+        optional: {
+          description:
+            'Yuri Brunetto is a software engineer, producer and musician.',
+        },
+      }}
       extend={{
         link: [{ rel: 'icon', href: '/favicon.svg' }],
       }}
